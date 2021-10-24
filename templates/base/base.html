@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="{% static 'assets/img/apple-icon.png' %}">
+  <link rel="icon" type="image/png" href="{% static 'assets/img/favicon.png' %}">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    {{title}}
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+  {% include '../include/style.html' %}
+</head>
+
+<body class="">
+  <div class="wrapper ">
+    <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
+      <div class="logo"><a href="#" class="simple-text logo-normal">
+          Creative Tim
+        </a></div>
+      {% include '../include/sidebar.html' %}
+    </div>
+    <div class="main-panel">
+      {% include '../include/navbar.html' %}
+      
+      <div class="content">
+        {% block content %}
+        
+        {% endblock content %}
+      </div>
+      
+      {% include '../include/footer.html' %}
+    </div>
+  </div>
+
+  {% include '../include/menu.html' %}
+  
+  {% include '../include/script.html' %}
+</body>
+
+</html>
