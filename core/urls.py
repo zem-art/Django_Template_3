@@ -28,5 +28,7 @@ urlpatterns = [
     path("icon/", views.icon, name="icon"),
     path("maps/", views.maps, name="map"),
     path("notifications/", views.notif, name="notif"),
+
+    # Super Admin
     path('admin/', admin.site.urls),
 ]
